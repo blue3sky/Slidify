@@ -31,7 +31,7 @@ T2 = T1 * [D2/D1] * [f(D1)/f(D2)]
 
 where
 
-f(x) = 13.49681 - 0.000030363x + 835.7114/x^0.7905,
+f(x) = 13.49681 - 0.000030363 * x + 835.7114 / x ^ 0.7905,
 
 T1 is the previous time taken in minutes,
 
