@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IP</title>
+  <title>Running Time Prediction</title>
   <meta charset="utf-8">
-  <meta name="description" content="IP">
-  <meta name="author" content="qu">
+  <meta name="description" content="Running Time Prediction">
+  <meta name="author" content="YK Tan">
   <meta name="generator" content="slidify" />
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -32,9 +32,9 @@
     <!-- LOGO SLIDE -->
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
-    <h1>IP</h1>
-    <h2>slidify</h2>
-    <p>qu<br/>it</p>
+    <h1>Running Time Prediction</h1>
+    <h2>Data Products</h2>
+    <p>YK Tan<br/>IT</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -43,14 +43,20 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>Introduction</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
+    <p>This Shiny application demonstrates the use of Cameron&#39;s formula to predict the time to finish a race based on the results of a previous race including the previous time taken and previous distance run.  </p>
+
+<p>To calculate the projected time for the new race, the following inputs are required:</p>
+
+<ol>
+<li>the previous distance run in meters, </li>
+<li>the previous time taken to complete the run in hours, minutes and seconds, </li>
+<li>the new distance to be run in meters.<br></li>
 </ol>
+
+<p>Once the information is provided and the Calculate Projected Time button is clicked, the predicted time taken for the new run with the new distance to be run will be displayed.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -58,10 +64,60 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Cameron Run Time Prediction Formula</h2>
   </hgroup>
   <article data-timings="">
-    <p>Common </p>
+    <p>T2 = T1 * [D2/D1] * [f(D1)/f(D2)]</p>
+
+<p>where</p>
+
+<p>f(x) = 13.49681 - 0.000030363x + 835.7114/x<sup>0.7905,</sup></p>
+
+<p>T1 is the previous time taken in minutes,</p>
+
+<p>D1 is the previous distance run in meters,</p>
+
+<p>D2 is the new distance to be run in meters, </p>
+
+<p>T2 is the projected time in minutes for the new race</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Example on the use of Run Time Prediction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Patrick is preparing for the Sundown Marathon. Last week, Patrick ran 10000 meters with a timing of 55 mins 13 secs.  This week, Patrick completed a 15000 meters run in 1 hours 26 mins 6 secs.  He wants to predict this run time of 21000 meters for next week.  </p>
+
+<p>Using the Cameron formula for the first set of race result gives us:</p>
+
+<p>T2=121.1404, or 2 hrs 1 mins 8 secs</p>
+
+<p>Using the Cameron formula for the second set of race result gives us:</p>
+
+<p>T2=123.0984, or 2 hrs 3 mins 6 secs</p>
+
+<p>Averaging the two performance projections give us a predicted run time of:</p>
+
+<p>122.1194, or 2hrs 2 mins 7 secs</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Use of the Prediction</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Access the URL for the prediction at (<a href="https://yapkuantan.shinyapps.io/Dataprodproj/">https://yapkuantan.shinyapps.io/Dataprodproj/</a>)</li>
+<li>Enter all the inputs required </li>
+<li>Click on the Calculate Projected Time button to generate the predicted time for the new race</li>
+</ol>
 
   </article>
   <!-- Presenter Notes -->
@@ -73,14 +129,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='Introduction'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Cameron Run Time Prediction Formula'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Example on the use of Run Time Prediction'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Use of the Prediction'>
+         4
       </a>
     </li>
   </ul>
